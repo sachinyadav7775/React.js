@@ -38,7 +38,6 @@ function Card({userName , btn}) {
                     >
                     {btn} ({count})
                     </button>
-
                     <div className="flex items-center space-x-1 text-xs text-gray-500">
                         <svg
                             className="w-4 h-4"
