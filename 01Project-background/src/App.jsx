@@ -10,6 +10,7 @@ function App() {
         <div className='flex flex-wrap justify-center shadow-lg gap-3 bg-blue-100 px-4 py-4 rounded-xl'>
           <button onClick={() => setColor("red")} className='outline-none px-4 py-4 rounded-xl cursor-pointer shadow-lg font-bold' style={{background: "red"}}>Red</button>
           <button onClick={() => setColor("blue")} className='outline-none px-4 py-4 rounded-xl cursor-pointer shadow-lg font-bold' style={{background: "blue"}}>Blue</button>
+          <button onClick={() => setColor("pink")} className='outline-none px-4 py-4 rounded-xl cursor-pointer shadow-lg font-bold' style={{background: "pink"}}>pink</button>
           <button onClick={() => setColor("grey")} className='outline-none px-4 py-4 rounded-xl cursor-pointer shadow-lg font-bold' style={{background: "grey"}}>Grey</button>
           <button onClick={() => setColor("white")} className='outline-none px-4 py-4 rounded-xl cursor-pointer shadow-lg font-bold' style={{background: "White"}}>White</button>
           <button onClick={() => setColor("green")} className='outline-none px-4 py-4 rounded-xl cursor-pointer shadow-lg font-bold' style={{background: "green"}}>Green</button>
