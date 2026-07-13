@@ -21,12 +21,12 @@ body {
 }
 
 h1 {
+  color: #fff;
   font-size: 100px;
   padding: 20px 60px;
   border-radius: 8px;
-  background: #777777;
-  color: white;
   margin-bottom: 50px;
+  background: #777777;
 }
 
 .btn {
@@ -35,14 +35,14 @@ h1 {
 }
 
 button {
-  cursor: pointer;
   border: none;
+  color: #fff;
+  cursor: pointer;
   font-weight: 600;
   font-size: 1.2rem;
   border-radius: 8px;
   padding: 18px 30px;
   letter-spacing: 0.1ch;
-  color: #fff;
   transition: all 0.3s ease;
 }
 
