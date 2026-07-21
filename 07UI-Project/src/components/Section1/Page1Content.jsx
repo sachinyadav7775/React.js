@@ -10,4 +10,4 @@ const Page1Content = (props) => {
   )
 }
 
-export default Page1Content
+export default Page1Content 

@@ -18,4 +18,4 @@ const RightContent = (props) => {
     );
 };
 
-export default RightContent;
+export default RightContent; 

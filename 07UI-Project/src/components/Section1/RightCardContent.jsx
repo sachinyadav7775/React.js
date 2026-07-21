@@ -10,13 +10,13 @@ const RightCardContent = (props) => {
                 <p className='mb-10 text-shadow-2xs text-white text-xl leading-relaxed'>{props.intro}</p>
 
                 <div className='flex justify-between'>
-                    <button className='px-8 py-2 text-white font-medium rounded-full'style={{ backgroundColor: props.btnColor }}>{props.tag}</button>
-                    <button className='px-3 py-2 text-white font-medium rounded-full'style={{ backgroundColor: props.btnColor }}><i className="ri-arrow-right-line"></i></button>
+                    <button className='px-8 py-2 cursor-pointer text-white font-medium rounded-full' style={{ backgroundColor: props.btnColor }}>{props.tag}</button>
+                    <button className='px-3 py-2 cursor-pointer text-white font-medium rounded-full' style={{ backgroundColor: props.btnColor }}><i className="ri-arrow-right-line"></i></button>
                 </div>
             </div>
 
         </div>
     )
 }
-
+ 
 export default RightCardContent

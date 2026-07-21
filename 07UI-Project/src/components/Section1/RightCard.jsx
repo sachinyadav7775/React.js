@@ -9,4 +9,4 @@ const RightCard = (props) => {
     )
 }
 
-export default RightCard
+export default RightCard 

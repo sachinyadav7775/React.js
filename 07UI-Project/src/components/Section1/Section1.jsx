@@ -10,4 +10,4 @@ const Section1 = (props) => {
   )
 }
 
-export default Section1
+export default Section1 
