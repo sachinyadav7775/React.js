@@ -1,0 +1,33 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #222;
+}
+
+input, button {
+  padding: 20px 30px;
+  margin: 10px;
+  border-radius: 4px;
+  border: none;
+  font-size: large;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+input {
+  color: #fff;
+  background: #a29e9e;
+}
+
+button {
+  background: #2ddce5;
+}
+
+button:hover {
+  transition: ease-in;
+  background: #5ff4fc;
+}
