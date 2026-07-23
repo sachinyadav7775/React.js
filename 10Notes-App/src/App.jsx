@@ -27,10 +27,10 @@ const App = () => {
       </form>
 
       <div className='p-10'>
-        <h1 className='text-2xl font-bold'>Your Notes</h1>
+        <h1 className='text-3xl font-bold'>Your Notes</h1>
         <div className=' mt-5 flex flex-wrap gap-5'>
-          <div className='h-52 w-40 bg-white rounded-2xl'></div>
-          <div className='h-52 w-40 bg-white rounded-2xl'></div>
+          <div className='h-60 w-50 bg-white rounded-2xl'></div>
+          <div className='h-60 w-50 bg-white rounded-2xl'></div>
         </div>
       </div>
 
