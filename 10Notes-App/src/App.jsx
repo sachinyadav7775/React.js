@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 
 const App = () => {
   const [title, setTitle] = useState('')
@@ -14,6 +14,12 @@ const App = () => {
     setTitle('')
     setDetails('')
   };
+
+  const deleteNote = (idx) => {
+    const copyTask = [...task];
+    copyTask.splice(idx,1)
+    setTask(copyTask)
+  }
 
   return (
 
@@ -43,7 +49,7 @@ const App = () => {
           }}
         ></textarea>
 
-        <button type="submit" className="w-full px-5 py-2 bg-white text-black font-medium rounded cursor-pointer active:bg-gray-400">
+        <button type="submit" className="w-full px-5 py-2 bg-white text-black font-medium rounded cursor-pointer active:bg-gray-400 active:scale-95">
           Add Note
         </button>
 
@@ -56,10 +62,15 @@ const App = () => {
         <div className="mt-5 flex flex-wrap gap-5">
           {task.map(function(elem, idx){
 
-              return <div key={idx} className="h-60 w-52 p-4 text-black bg-white rounded-2xl">
+            return <div key={idx} className=" flex justify-between flex-col items-start h-60 w-52 px-4 py-6 relative text-black bg-cover bg-[url('https://static.vecteezy.com/system/resources/thumbnails/037/152/684/small/sticky-note-paper-background-free-png.png')] rounded-2xl">
+              <div>
                 <h2 className="leading-tight text-xl font-bold">{elem.title}</h2>
-                <p className="mt-2 leading-tight font-medium text-gray-600">{elem.details}</p>
+                <p className="mt-2 leading-tight font-semibold text-gray-600">{elem.details}</p>
               </div>
+              <button onClick={() => {
+                deleteNote(idx)
+              }} className="w-full bg-red-500 cursor-pointer active:bg-red-600 active:scale-95 text-white p-2 rounded font-bold">Delete</button>
+            </div>
           })}
         </div>
       </div>
