@@ -9,14 +9,14 @@ const Navbar2 = () => {
                 onClick={() => {
                     navigation('/')
                 }} 
-                className='bg-emerald-800 px-5 py-2 rounded m-2 font-medium cursor-pointer active:scale-95'>
+                className='bg-emerald-800 px-5 py-2 rounded m-2 font-medium cursor-pointer active:hover:bg-emerald-900 active:scale-95'>
                 Return to Home Page
             </button>
             <button 
                 onClick={() => {
                     navigation(-1)
                 }} 
-                className='bg-emerald-800 px-5 py-2 rounded m-2 font-medium cursor-pointer active:scale-95'>
+                className='bg-emerald-800 px-5 py-2 rounded m-2 font-medium cursor-pointer active:hover:bg-emerald-900 active:scale-95'>
                 Back
             </button>
         </div>
