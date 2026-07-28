@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { ThemeDataContext } from '../context/ThemeContext'
 
 const Button = () => {
@@ -9,11 +9,11 @@ const Button = () => {
         setTheme('dark')
     }
 
-  return (
-    <div>
-        <button onClick={changeTheme}>Change Theme</button>
-    </div>
-  )
+    return (
+        <div>
+            <button onClick={changeTheme}>Change Theme</button>
+        </div>
+    )
 }
 
 export default Button
