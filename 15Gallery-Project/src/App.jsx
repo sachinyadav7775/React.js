@@ -8,7 +8,7 @@ const App = () => {
   const [index, setIndex] = useState(1)
 
   const getData = async () => {
-    const response = await axios.get(`https://picsum.photos/v2/list?page=${index}&limit=24`)
+    const response = await axios.get(`https://picsum.photos/v2/list?page=${index}&limit=21`)
     setUserData(response.data);
   }
 
@@ -27,9 +27,18 @@ const App = () => {
   }
 
   return (
-    <div className='min-h-screen bg-black overflow-auto p-4 text-white'>
+    <div className='min-h-screen bg-black overflow-auto text-white'>
 
-      <div className='h-[82%] flex flex-wrap justify-center gap-4'>
+      <div className='text-center py-6'>
+        <h1 className='text-4xl font-black text-orange-500 tracking-wide'>
+          PIXEL GALLERY
+        </h1>
+        <p className='text-gray-300 mt-3 text-lg'>
+          Explore • Discover • Download Amazing Photography
+        </p>
+      </div>
+
+      <div className='h-[82%] flex flex-wrap justify-center gap-4 p-4'>
         {PrintUserData}
       </div>
 
@@ -59,7 +68,7 @@ const App = () => {
           className="bg-amber-400 text-black px-5 py-2 rounded font-semibold cursor-pointer active:scale-95">
           Next
         </button>
-        
+
       </div>
 
     </div>
