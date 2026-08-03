@@ -38,7 +38,7 @@ const contacts = [
     role: "UI/UX Designer",
     location: "Bengaluru, India",
     email: "sophia@gmail.com",
-    phone: "+41 (987) 6540_3212",
+    phone: "+41 (987) 6540-3212",
     image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG1lbnxlbnwwfHwwfHx8MA%3D%3D",
   },
   {

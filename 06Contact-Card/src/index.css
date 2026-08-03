@@ -12,6 +12,10 @@ body {
   background: #16212f;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .parent {
   width: 100%;
   min-height: 100vh;
@@ -26,11 +30,11 @@ body {
 }
 
 .top {
-  padding: 10px;
+  width: 100%;
 }
 
 .home {
-  margin-top: 10px;
+  margin-top: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,16 +48,9 @@ body {
 
 .menu-icon {
   display: flex;
-  gap: 30px;
-}
-
-.menu-icon span {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 15px;
-  border-radius: 50%;
-  background: #232f40d8;
+  gap: 25px;
+  cursor: pointer;
 }
 
 .search {
@@ -61,12 +58,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .search-element {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .search-element p {
@@ -77,22 +76,26 @@ body {
 .btn2 {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  gap: 8px;
   border: none;
   padding: 10px 18px;
-  border-radius: 5px;
+  border-radius: 6px;
   background: #232f40;
   color: #fff;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn1:hover,
+.btn2:hover {
+  background: #2f4056;
 }
 
 .search-box {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .search-box button {
@@ -101,11 +104,16 @@ body {
   border: none;
   border-radius: 50%;
   background: #2563eb;
-  color: #fff;
+  color: white;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #1d4ed8;
 }
 
 .search-text {
@@ -113,67 +121,84 @@ body {
   align-items: center;
   gap: 10px;
   background: #232f40;
-  padding: 8px 12px;
-  border-radius: 5px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  min-width: 280px;
 }
 
 .search-text input {
+  width: 100%;
   border: none;
   outline: none;
   background: transparent;
-  color: #fff;
-  font-size: 18px;
+  color: white;
+  font-size: 16px;
 }
 
 .search-text input::placeholder {
-  color: #fff;
+  color: #aeb7c3;
 }
 
 .bottom {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: flex-start;
 }
 
 .bottom-card {
-  width: 350px;
+  width: 340px;
   background: #232f40;
   border-radius: 15px;
   overflow: hidden;
+  transition: 0.3s;
+}
+
+.bottom-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .card-top {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
   padding: 20px;
 }
 
 .card-top img {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
   object-fit: cover;
-  border-radius: 20%;
   display: block;
-  margin: 0 auto;
+  margin: auto;
+}
+
+.card-top svg {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
 }
 
 .card-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px 0;
+  text-align: center;
+  padding: 0 20px 20px;
+}
+
+.card-center h3 {
+  margin-bottom: 12px;
 }
 
 .card-center p {
-  margin-top: 15px;
-  padding: 5px 10px;
-  border-radius: 5px;
+  display: inline-block;
+  padding: 6px 15px;
   background: #2563eb;
+  border-radius: 20px;
+  font-size: 14px;
 }
 
 .card-bottom {
-  margin-top: 20px;
-  border-top: 2px solid #384b65a2;
+  border-top: 1px solid #3b4b63;
 }
 
 .map,
@@ -181,8 +206,14 @@ body {
 .smartphone {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 18px 25px;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #324154;
+}
+
+.smartphone {
+  border-bottom: none;
 }
 
 .map span,
@@ -191,14 +222,38 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: #cfd6de;
+  font-weight: 500;
+}
+
+.map p,
+.email p,
+.smartphone p {
+  text-align: right;
+  color: #cfd6de;
+  word-break: break-word;
+  max-width: 180px;
+}
+
+@media (max-width: 992px) {
+  .bottom {
+    justify-content: center;
+  }
+
+  .bottom-card {
+    width: 320px;
+  }
 }
 
 @media (max-width: 768px) {
-  .search,
-  .home {
+  .parent {
+    padding: 20px;
+  }
+
+  .home,
+  .search {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
   }
 
   .search-box {
@@ -207,14 +262,46 @@ body {
 
   .search-text {
     flex: 1;
+    min-width: 0;
     width: 100%;
   }
 
-  .search-text input {
-    width: 100%;
+  .bottom {
+    justify-content: center;
   }
 
   .bottom-card {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .parent {
+    padding: 15px;
+  }
+
+  .search-element {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn1,
+  .btn2 {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .map,
+  .email,
+  .smartphone {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .map p,
+  .email p,
+  .smartphone p {
+    text-align: left;
+    max-width: 100%;
   }
 }
