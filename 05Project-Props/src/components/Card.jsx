@@ -23,7 +23,7 @@ const Card = (props) => {
             <h3>{props.pay}</h3>
             <p>{props.location}</p>
             </div>
-            <button>Apple Now</button>
+            <button>Apply Now</button>
         </div>
     </div>
   )
