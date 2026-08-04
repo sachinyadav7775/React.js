@@ -12,9 +12,9 @@ html, body {
 }
 
 .parent {
+    gap: 30px;
     width: 100%;
     /* min-height: 100vh; */
-    gap: 30px;
     color: #000;
     padding: 30px;
     display: flex;
