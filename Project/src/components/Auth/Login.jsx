@@ -14,9 +14,9 @@ const Login = () => {
     }
 
     return (
-        <div className='h-screen w-screen flex items-center justify-center'>
+        <div className='min-h-screen w-full flex items-center justify-center px-4 py-6'>
 
-            <div className='border-emerald-500 border-2 p-12 rounded-xl'>
+            <div className='w-full max-w-md border-emerald-500 border-2 p-6 sm:p-10 md:p-12 rounded-xl'>
 
                 <form
                     onSubmit={(e) => {
