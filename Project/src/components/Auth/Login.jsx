@@ -1,19 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {LockKeyhole, CircleUserRound} from 'lucide-react'
 
 const Login = () => {
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const submitHandler = (e) => {
+        e.preventDefault()
+        console.log("Hello guysss, Form Submitted")
+        setEmail("")
+        setPassword("")
+    }
+
     return (
         <div className='h-screen w-screen flex items-center justify-center'>
 
             <div className='border-emerald-500 border-2 p-12 rounded-xl'>
 
-                <form className='flex flex-col items-center justify-center gap-10'>
+                <form
+                    onSubmit={(e) => {
+                        submitHandler(e)
+                    }}
+                    className='flex flex-col items-center justify-center gap-10'
+                >
 
                     <div className='relative w-full'>
                         <input 
-                            className='w-full border-2 border-emerald-700 rounded-full text-xl pl-5 pr-14 py-3 text-white outline-none bg-transparent hover:border-emerald-500 transition-colors duration-200 placeholder:text-gray-400' 
-                            type="email" 
+                            type="email"
+                            value={email} 
+                            onChange={(e)=>{
+                                setEmail(e.target.value)
+                            }}
                             placeholder='Enter your email' 
+                            className='w-full border-2 border-emerald-700 rounded-full text-xl pl-5 pr-14 py-3 text-white outline-none bg-transparent hover:border-emerald-500 transition-colors duration-200 placeholder:text-gray-400' 
                             required
                         />
                         <CircleUserRound 
@@ -24,9 +44,13 @@ const Login = () => {
 
                     <div className="relative w-full">
                         <input 
-                            className="w-full border-2 border-emerald-700 rounded-full text-xl pl-5 pr-14 py-3 text-white outline-none bg-transparent hover:border-emerald-500 transition-colors duration-200 placeholder:text-gray-400"
                             type="password"
+                            value={password}
+                            onChange={(e)=>{
+                                setPassword(e.target.value)
+                            }}
                             placeholder="Enter password"
+                            className="w-full border-2 border-emerald-700 rounded-full text-xl pl-5 pr-14 py-3 text-white outline-none bg-transparent hover:border-emerald-500 transition-colors duration-200 placeholder:text-gray-400"
                             required
                         />
                         <LockKeyhole 
@@ -50,7 +74,7 @@ const Login = () => {
 
                     <button 
                         type='submit'
-                        className='w-full border-none rounded-full text-lg px-8 py-3 text-white outline-none font-semibold bg-emerald-700 hover:bg-emerald-800 cursor-pointer'>
+                        className='w-full border-none rounded-full text-lg px-8 py-3 text-white outline-none font-semibold bg-emerald-700 hover:bg-emerald-600 cursor-pointer'>
                         Log In
                     </button>
 
