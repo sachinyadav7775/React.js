@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import {LockKeyhole, CircleUserRound} from 'lucide-react'
 
-const Login = () => {
+const Login = ({handleLogin}) => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     const submitHandler = (e) => {
         e.preventDefault()
-        console.log("Hello guysss, Form Submitted")
+        handleLogin(email,password)
         setEmail("")
         setPassword("")
     }
