@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Login from './components/Auth/Login'
 import EmployeeDashboard from './components/Dashboard/EmployeeDashboard'
 import AdminDashboard from './components/Dashboard/AdminDashboard'
@@ -8,24 +8,38 @@ const App = () => {
 
   const [user, setUser] = useState(null)
   const  authData = useContext(AuthContext)
+  const [loggedInUserData, setLoggedInUserData] = useState(null)
+
+  // useEffect(() => {
+  //   if(authData) {
+  //     const loggedInUser = localStorage.getItem("loggedInUser")
+  //     if(loggedInUser){
+  //       setUser(loggedInUser.role)
+  //     }
+  //   }
+  // }, [authData]);
 
   const handleLogin = (email,password) => {
-    if(email == 'admin@sky1.com' && password == '1234') {
+    if(email == 'admin@sky.com' && password == '1234') {
       setUser('admin')
-    }else if (email == 'user@sky2.com' && password == '12345'){
-      setUser('employee')
+      localStorage.setItem('loggedInUser',JSON.stringify({role:'admin'}))
+    }else if (authData){
+      const employee = authData && authData.employees.find((e) => email == e.email && e.password == password)
+      if(employee) {
+        setUser('employee')
+        setLoggedInUserData(employee)
+        localStorage.setItem('loggedInUser',JSON.stringify({role:'employee'}))
+      }
     }
     else{
       alert("Invalid User")
     }
   }
 
-
-
   return (
     <>
       {!user ? <Login handleLogin={handleLogin}/>: ''}
-      {user == 'admin' ? <AdminDashboard/> : <EmployeeDashboard/>}
+      {user == 'admin' ? <AdminDashboard/> : (user == 'employee' ? <EmployeeDashboard dara={loggedInUserData} /> : null)}
     </>
   )
 }
