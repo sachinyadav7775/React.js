@@ -1,9 +1,17 @@
 const employees = [
   {
     id: 1,
-    name: "Amit",
-    email: "amit@sky.com",
+    name: "Ashish",
+    email: "ashish@sky.com",
     password: "1234",
+
+    taskCounts: {
+      active: 2,
+      newTask: 3,
+      completed: 5,
+      failed: 0
+    },
+
     tasks: [
       {
         active: true,
@@ -50,9 +58,17 @@ const employees = [
 
   {
     id: 2,
-    name: "Priya",
-    email: "priya@sky.com",
+    name: "Anurag",
+    email: "anurag@sky.com",
     password: "1234",
+
+    taskCounts: {
+      active: 2,
+      newTask: 1,
+      completed: 7,
+      failed: 0
+    },
+
     tasks: [
       {
         active: true,
@@ -89,9 +105,17 @@ const employees = [
 
   {
     id: 3,
-    name: "Rahul",
-    email: "rahul@sky.com",
+    name: "Sujeet",
+    email: "sujeet@sky.com",
     password: "1234",
+
+    taskCounts: {
+      active: 3,
+      newTask: 2,
+      completed: 6,
+      failed: 1
+    },
+
     tasks: [
       {
         active: true,
@@ -153,9 +177,17 @@ const employees = [
 
   {
     id: 4,
-    name: "Neha",
-    email: "neha@sky.com",
+    name: "Sachin",
+    email: "sachin@sky.com",
     password: "1234",
+
+    taskCounts: {
+      active: 3,
+      newTask: 1,
+      completed: 2,
+      failed: 4
+    },
+
     tasks: [
       {
         active: true,
@@ -189,7 +221,7 @@ const employees = [
         category: "Management"
       },
       {
-        active: false,
+        active: true,
         newTask: false,
         completed: true,
         failed: false,
@@ -204,9 +236,17 @@ const employees = [
 
   {
     id: 5,
-    name: "Vikash",
-    email: "vikash@sky.com",
+    name: "Avanish",
+    email: "avanish@sky.com",
     password: "1234",
+
+    taskCounts: {
+      active: 3,
+      newTask: 1,
+      completed: 2,
+      failed: 1
+    },
+
     tasks: [
       {
         active: true,
@@ -277,6 +317,7 @@ const employees = [
     ]
   }
 ]
+
 
 const admin = [
   {
