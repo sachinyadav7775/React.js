@@ -7,9 +7,9 @@ const employees = [
 
     taskCounts: {
       active: 2,
-      newTask: 3,
-      completed: 5,
-      failed: 0
+      newTask: 1,
+      completed: 1,
+      failed: 1
     },
 
     tasks: [
@@ -65,7 +65,7 @@ const employees = [
     taskCounts: {
       active: 2,
       newTask: 1,
-      completed: 7,
+      completed: 1,
       failed: 0
     },
 
@@ -111,8 +111,8 @@ const employees = [
 
     taskCounts: {
       active: 3,
-      newTask: 2,
-      completed: 6,
+      newTask: 1,
+      completed: 1,
       failed: 1
     },
 
@@ -182,10 +182,10 @@ const employees = [
     password: "1234",
 
     taskCounts: {
-      active: 3,
+      active: 2,
       newTask: 1,
       completed: 2,
-      failed: 4
+      failed: 0
     },
 
     tasks: [
@@ -210,9 +210,9 @@ const employees = [
         category: "Meeting"
       },
       {
-        active: true,
+        active: false,
         newTask: false,
-        completed: false,
+        completed: true,
         failed: false,
         taskTitle: "Review Documents",
         taskDescription:
@@ -221,7 +221,7 @@ const employees = [
         category: "Management"
       },
       {
-        active: true,
+        active: false,
         newTask: false,
         completed: true,
         failed: false,
@@ -318,7 +318,6 @@ const employees = [
   }
 ]
 
-
 const admin = [
   {
     id: 1,
@@ -334,11 +333,11 @@ export const setLocalStorage = () => {
 
 export const getLocalStorage = () => {
   const employees = JSON.parse(
-    localStorage.getItem("employees")
+    localStorage.getItem("employees") || "[]"
   )
 
   const admin = JSON.parse(
-    localStorage.getItem("admin")
+    localStorage.getItem("admin") || "[]"
   )
 
   return {
@@ -346,4 +345,3 @@ export const getLocalStorage = () => {
     admin
   }
 }
-// localStorage.clear()
