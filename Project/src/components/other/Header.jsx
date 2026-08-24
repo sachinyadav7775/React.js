@@ -1,9 +1,10 @@
 import React from "react"
 
-const Header = ({ data }) => {
+const Header = (props) => {
   const logOutUser = () => {
     localStorage.removeItem("loggedInUser")
-    window.location.reload()
+    props.changeUser('')
+    // window.location.reload()
   }
 
   return (
@@ -12,7 +13,7 @@ const Header = ({ data }) => {
         Hello, <br />
 
         <span className="font-semibold text-2xl sm:text-3xl">
-          {data?.name || "User"} 👋
+          {props.data?.name || "User"} 👋
         </span>
       </h1>
 

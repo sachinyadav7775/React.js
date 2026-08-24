@@ -90,11 +90,11 @@ const App = () => {
       )}
 
       {user === "admin" && (
-        <AdminDashboard />
+        <AdminDashboard changeUser={setUser} />
       )}
 
       {user === "employee" && loggedInUserData && (
-        <EmployeeDashboard data={loggedInUserData} />
+        <EmployeeDashboard changeUser={setUser} data={loggedInUserData} />
       )}
     </>
   )
