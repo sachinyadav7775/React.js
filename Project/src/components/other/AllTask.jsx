@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { AuthContext } from '../../context/AuthProvider'
 
 const AllTask = () => {
-    const authData = useContext(AuthContext)
+    const [userData, setUserData] = useContext(AuthContext)
 
     return (
         <div className="bg-[#1C1C1C] p-3 sm:p-5 mt-5 rounded">
@@ -37,7 +37,7 @@ const AllTask = () => {
                     {/* Employee List */}
                     <div id="Alltask" className="max-h-55 overflow-y-auto">
 
-                        {authData.employees.map((elem) => {
+                        {userData.map((elem) => {
                             return (
                                 <div
                                     key={elem.id}
@@ -74,7 +74,7 @@ const AllTask = () => {
             <p className="text-gray-400 text-xs mt-2 sm:hidden">
                 ← Swipe left/right to see all tasks →
             </p>
-            
+
         </div>
     )
 }

@@ -19,7 +19,8 @@ const employees = [
         completed: false,
         failed: false,
         taskTitle: "Design Homepage",
-        taskDescription: "Create a modern and responsive homepage design.",
+        taskDescription:
+            "Create a modern and responsive homepage design.",
         taskDate: "2026-08-20",
         category: "Design"
       },
@@ -29,7 +30,8 @@ const employees = [
         completed: true,
         failed: false,
         taskTitle: "Update Logo",
-        taskDescription: "Replace the old company logo with the new version.",
+        taskDescription:
+            "Replace the old company logo with the new version.",
         taskDate: "2026-08-18",
         category: "Design"
       },
@@ -39,7 +41,8 @@ const employees = [
         completed: false,
         failed: false,
         taskTitle: "Fix Navbar",
-        taskDescription: "Fix navigation issues on mobile devices.",
+        taskDescription:
+            "Fix navigation issues on mobile devices.",
         taskDate: "2026-08-20",
         category: "Development"
       },
@@ -49,7 +52,8 @@ const employees = [
         completed: false,
         failed: true,
         taskTitle: "Deploy Website",
-        taskDescription: "Deploy the updated website to the production server.",
+        taskDescription:
+            "Deploy the updated website to the production server.",
         taskDate: "2026-08-17",
         category: "Deployment"
       }
@@ -123,8 +127,7 @@ const employees = [
         completed: false,
         failed: false,
         taskTitle: "Fix Login Bug",
-        taskDescription:
-          "Find and fix the authentication issue in the login system.",
+        taskDescription: "Find and fix the authentication issue in the login system.",
         taskDate: "2026-08-20",
         category: "Development"
       },
@@ -134,8 +137,7 @@ const employees = [
         completed: false,
         failed: false,
         taskTitle: "Build Dashboard",
-        taskDescription:
-          "Develop the employee dashboard with required features.",
+        taskDescription: "Develop the employee dashboard with required features.",
         taskDate: "2026-08-22",
         category: "Development"
       },
@@ -145,8 +147,7 @@ const employees = [
         completed: true,
         failed: false,
         taskTitle: "API Integration",
-        taskDescription:
-          "Connect the frontend application with the backend API.",
+        taskDescription: "Connect the frontend application with the backend API.",
         taskDate: "2026-08-18",
         category: "Development"
       },
@@ -156,8 +157,7 @@ const employees = [
         completed: false,
         failed: true,
         taskTitle: "Database Update",
-        taskDescription:
-          "Update the database schema according to the new requirements.",
+        taskDescription: "Update the database schema according to the new requirements.",
         taskDate: "2026-08-16",
         category: "Database"
       },
@@ -167,8 +167,7 @@ const employees = [
         completed: false,
         failed: false,
         taskTitle: "Testing",
-        taskDescription:
-          "Test all dashboard features and report bugs.",
+        taskDescription: "Test all dashboard features and report bugs.",
         taskDate: "2026-08-23",
         category: "Testing"
       }
@@ -182,9 +181,9 @@ const employees = [
     password: "1234",
 
     taskCounts: {
-      active: 2,
+      active: 1,
       newTask: 1,
-      completed: 2,
+      completed: 3,
       failed: 0
     },
 
@@ -215,8 +214,7 @@ const employees = [
         completed: true,
         failed: false,
         taskTitle: "Review Documents",
-        taskDescription:
-          "Review and approve the submitted project documents.",
+        taskDescription: "Review and approve the submitted project documents.",
         taskDate: "2026-08-21",
         category: "Management"
       },
@@ -226,8 +224,7 @@ const employees = [
         completed: true,
         failed: false,
         taskTitle: "Client Call",
-        taskDescription:
-          "Discuss project progress with the client.",
+        taskDescription: "Discuss project progress with the client.",
         taskDate: "2026-08-18",
         category: "Communication"
       }
@@ -254,8 +251,7 @@ const employees = [
         completed: false,
         failed: false,
         taskTitle: "Create Landing Page",
-        taskDescription:
-          "Build a responsive landing page for the new product.",
+        taskDescription: "Build a responsive landing page for the new product.",
         taskDate: "2026-08-20",
         category: "Development"
       },
@@ -265,8 +261,7 @@ const employees = [
         completed: false,
         failed: false,
         taskTitle: "Optimize Website",
-        taskDescription:
-          "Improve website loading speed and performance.",
+        taskDescription: "Improve website loading speed and performance.",
         taskDate: "2026-08-21",
         category: "Performance"
       },
@@ -276,8 +271,7 @@ const employees = [
         completed: true,
         failed: false,
         taskTitle: "Fix CSS Issues",
-        taskDescription:
-          "Fix layout and responsive design problems.",
+        taskDescription: "Fix layout and responsive design problems.",
         taskDate: "2026-08-17",
         category: "Frontend"
       },
@@ -287,8 +281,7 @@ const employees = [
         completed: false,
         failed: true,
         taskTitle: "Write Unit Tests",
-        taskDescription:
-          "Create unit tests for the main application components.",
+        taskDescription: "Create unit tests for the main application components.",
         taskDate: "2026-08-16",
         category: "Testing"
       },
@@ -298,8 +291,7 @@ const employees = [
         completed: false,
         failed: false,
         taskTitle: "GitHub Update",
-        taskDescription:
-          "Push the latest project changes to GitHub.",
+        taskDescription: "Push the latest project changes to GitHub.",
         taskDate: "2026-08-22",
         category: "Development"
       },
@@ -309,8 +301,7 @@ const employees = [
         completed: true,
         failed: false,
         taskTitle: "Code Review",
-        taskDescription:
-          "Review the code submitted by other developers.",
+        taskDescription: "Review the code submitted by other developers.",
         taskDate: "2026-08-19",
         category: "Development"
       }
@@ -327,8 +318,8 @@ const admin = [
 ]
 
 export const setLocalStorage = () => {
-  localStorage.setItem("employees", JSON.stringify(employees))
-  localStorage.setItem("admin", JSON.stringify(admin))
+  localStorage.setItem("employees",JSON.stringify(employees))
+  localStorage.setItem("admin",JSON.stringify(admin))
 }
 
 export const getLocalStorage = () => {
@@ -340,8 +331,5 @@ export const getLocalStorage = () => {
     localStorage.getItem("admin") || "[]"
   )
 
-  return {
-    employees,
-    admin
-  }
+  return {employees,admin}
 }

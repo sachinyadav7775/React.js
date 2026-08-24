@@ -8,11 +8,10 @@ const App = () => {
   const [user, setUser] = useState(null)
   const [loggedInUserData, setLoggedInUserData] = useState(null)
 
-  const authData = useContext(AuthContext)
+  const [userData] = useContext(AuthContext)
 
-  // Page refresh ke baad login restore karo
   useEffect(() => {
-    if (!authData) return
+    if (!userData) return
 
     const loggedInUser = localStorage.getItem("loggedInUser")
 
@@ -22,9 +21,8 @@ const App = () => {
 
     setUser(data.role)
 
-    // Agar employee login tha
     if (data.role === "employee") {
-      const employee = authData.employees.find(
+      const employee = userData.find(
         (employee) => employee.id === data.id
       )
 
@@ -35,9 +33,10 @@ const App = () => {
         setUser(null)
       }
     }
-  }, [authData])
+  }, [userData])
 
   const handleLogin = (email, password) => {
+    
     // Admin login
     if (
       email === "admin@sky.com" &&
@@ -48,7 +47,7 @@ const App = () => {
       localStorage.setItem(
         "loggedInUser",
         JSON.stringify({
-          role: "admin"
+          role: "admin",
         })
       )
 
@@ -56,8 +55,8 @@ const App = () => {
     }
 
     // Employee login
-    if (authData) {
-      const employee = authData.employees.find(
+    if (userData) {
+      const employee = userData.find(
         (employee) =>
           employee.email === email &&
           employee.password === password
@@ -71,7 +70,7 @@ const App = () => {
           "loggedInUser",
           JSON.stringify({
             role: "employee",
-            id: employee.id
+            id: employee.id,
           })
         )
 
@@ -79,22 +78,22 @@ const App = () => {
       }
     }
 
-    // Invalid login
     alert("Invalid email or password")
   }
 
   return (
     <>
-      {!user && (
-        <Login handleLogin={handleLogin} />
-      )}
+      {!user && <Login handleLogin={handleLogin} />}
 
       {user === "admin" && (
         <AdminDashboard changeUser={setUser} />
       )}
 
       {user === "employee" && loggedInUserData && (
-        <EmployeeDashboard changeUser={setUser} data={loggedInUserData} />
+        <EmployeeDashboard
+          changeUser={setUser}
+          data={loggedInUserData}
+        />
       )}
     </>
   )
