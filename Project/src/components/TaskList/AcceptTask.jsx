@@ -26,14 +26,14 @@ const AcceptTask = ({ data }) => {
 
         <button
           type="button"
-          className="flex-1 bg-green-600 py-2 px-2 text-sm rounded"
+          className="flex-1 bg-green-600 hover:bg-green-700 py-2 px-2 text-sm rounded cursor-pointer"
         >
           Mark Completed
         </button>
 
         <button
           type="button"
-          className="flex-1 bg-red-600 py-2 px-2 text-sm rounded"
+          className="flex-1 bg-red-600 hover:bg-red-700 py-2 px-2 text-sm rounded cursor-pointer"
         >
           Mark Failed
         </button>

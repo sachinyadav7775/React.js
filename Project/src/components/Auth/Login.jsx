@@ -74,7 +74,7 @@ const Login = ({handleLogin}) => {
 
                     <button 
                         type='submit'
-                        className='w-full border-none rounded-full text-lg px-8 py-3 text-white outline-none font-semibold bg-emerald-700 hover:bg-emerald-600 cursor-pointer'>
+                        className='w-full border-none rounded-full text-lg px-8 py-3 text-white outline-none font-semibold bg-emerald-700 hover:bg-emerald-600 active:scale-95 cursor-pointer'>
                         Log In
                     </button>
 

@@ -165,7 +165,7 @@ const CreateTask = () => {
 
                     <button
                         type="submit"
-                        className="w-full px-5 py-3 mt-4 text-sm rounded cursor-pointer bg-emerald-700 hover:bg-emerald-600"
+                        className="w-full px-5 py-3 mt-4 text-sm rounded cursor-pointer bg-emerald-700 hover:bg-emerald-600 active:scale-95"
                     >
                         Create Task
                     </button>

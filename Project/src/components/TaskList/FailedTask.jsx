@@ -25,7 +25,7 @@ const FailedTask = ({ data }) => {
             <div className="mt-4">
                 <button
                     disabled
-                    className="w-full bg-red-600 rounded py-2 px-2 text-sm"
+                    className="w-full bg-red-600 hover:bg-red-700 rounded py-2 px-2 text-sm cursor-pointer"
                 >
                     Failed
                 </button>

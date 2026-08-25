@@ -25,7 +25,7 @@ const CompleteTask = ({ data }) => {
             <div className="mt-4">
                 <button
                     disabled
-                    className="w-full bg-green-600 rounded py-2 px-2 text-sm"
+                    className="w-full bg-green-600 hover:bg-green-700 rounded py-2 px-2 text-sm cursor-pointer"
                 >
                     Completed
                 </button>

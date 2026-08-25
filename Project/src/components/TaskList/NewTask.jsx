@@ -20,7 +20,7 @@ const NewTask = ({ data }) => {
       </p>
 
       <div className="mt-4">
-        <button className="w-full bg-blue-600 border-none rounded py-2 px-2 text-sm">
+        <button className="w-full bg-blue-600 hover:bg-blue-700 border-none rounded py-2 px-2 text-sm cursor-pointer">
           Accept Task
         </button>
       </div>
