@@ -47,7 +47,7 @@ const App = () => {
         <button
           style={{opacity: index === 1 ? 0.6 : 1}}
           onClick={() => {
-            if(index>1) {
+            if(index>1) { 
               setIndex(index-1)
               setUserData([])
             }
