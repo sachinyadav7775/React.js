@@ -2,16 +2,17 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Login from './pages/Login'
 import Skill from './pages/Skill'
-import Navbar from './components/Navbar'
-import { Route, Routes } from 'react-router-dom'
-import Footer from './components/Footer'
 import Project from './pages/Project'
+// import Contact from './pages/Contact'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
-  return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-[#0F0F0F] text-white">
 
-      {/* ================= BACKGROUND ================= */}
+  return (
+
+    <div className="relative min-h-screen w-full overflow-hidden bg-[#0F0F0F] text-white">
 
       {/* Center Purple Glow */}
       <div
@@ -44,14 +45,7 @@ const App = () => {
 
       {/* ================= BLUR OVERLAY ================= */}
 
-      <div
-        className="
-          pointer-events-none
-          absolute inset-0
-          bg-black/20
-          backdrop-blur-md
-        "
-      />
+      <div className="pointer-events-none absolute inset-0 bg-black/20 backdrop-blur-md "/>
 
       {/* ================= MAIN CONTENT ================= */}
 
@@ -65,6 +59,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/skill" element={<Skill />} />
           <Route path="/project" element={<Project />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
         </Routes>
 
         <Footer/>
@@ -72,7 +67,9 @@ const App = () => {
       </div>
 
     </div>
+
   )
+  
 }
 
 export default App

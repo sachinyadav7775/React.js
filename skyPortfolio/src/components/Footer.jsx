@@ -1,7 +1,7 @@
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { LuArrowUp, LuMail } from "react-icons/lu";
-import { PiHeartFill } from "react-icons/pi";
 import { FaXTwitter } from "react-icons/fa6";
+import { PiHeartFill } from "react-icons/pi";
+import { LuArrowUp, LuMail } from "react-icons/lu";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
 
@@ -13,6 +13,7 @@ const Footer = () => {
   };
 
   return (
+      
     <footer className="border-t border-white/10 bg-black/40 backdrop-blur-md">
 
       {/* MAIN FOOTER */}
@@ -23,13 +24,10 @@ const Footer = () => {
           {/* BRAND */}
           <div>
 
-            <h2 className="text-2xl font-bold">
-              Sachin<span className="text-purple-500">.</span>
-            </h2>
+            <h2 className="text-2xl font-bold"> Sachin<span className="text-purple-500">.</span> </h2>
 
             <p className="mt-4 text-zinc-400 leading-7 max-w-sm">
-              A passionate web developer focused on creating modern,
-              responsive, and user-friendly digital experiences.
+              A passionate web developer focused on creating modern, responsive, and user-friendly digital experiences.
             </p>
 
             {/* SOCIALS */}
@@ -66,68 +64,33 @@ const Footer = () => {
 
           </div>
 
-
           {/* QUICK LINKS */}
           <div>
 
-            <h3 className="text-lg font-semibold">
-              Quick Links
-            </h3>
+            <h3 className="text-lg font-semibold"> Quick Links </h3>
 
             <div className="flex flex-col gap-3 mt-5">
 
-              <a
-                href="/"
-                className="text-zinc-400 hover:text-purple-400 transition"
-              >
-                Home
-              </a>
+              <a href="/" className="text-zinc-400 hover:text-purple-400 transition"> Home </a>
 
-              <a
-                href="/about"
-                className="text-zinc-400 hover:text-purple-400 transition"
-              >
-                About
-              </a>
+              <a href="/about" className="text-zinc-400 hover:text-purple-400 transition"> About </a>
 
-              <a
-                href="/skill"
-                className="text-zinc-400 hover:text-purple-400 transition"
-              >
-                Skills
-              </a>
+              <a href="/skill" className="text-zinc-400 hover:text-purple-400 transition" > Skills </a>
 
-              <a
-                href="#projects"
-                className="text-zinc-400 hover:text-purple-400 transition"
-              >
-                Projects
-              </a>
+              <a href="/project" className="text-zinc-400 hover:text-purple-400 transition"> Projects </a>
 
-              <a
-                href="#contact"
-                className="text-zinc-400 hover:text-purple-400 transition"
-              >
-                Contact
-              </a>
+              <a href="/contact" className="text-zinc-400 hover:text-purple-400 transition"> Contact </a>
 
             </div>
 
           </div>
 
-
           {/* CONTACT */}
           <div>
 
-            <h3 className="text-lg font-semibold">
-              Get In Touch
-            </h3>
+            <h3 className="text-lg font-semibold"> Get In Touch </h3>
 
-            <p className="mt-5 text-zinc-400">
-              Have a project in mind?
-              <br />
-              Let's work together.
-            </p>
+            <p className="mt-5 text-zinc-400"> Have a project in mind? <br /> Let's work together. </p>
 
             <a
               href="mailto:yourmail@gmail.com"
@@ -141,13 +104,10 @@ const Footer = () => {
 
         </div>
 
-
         {/* DIVIDER */}
         <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
 
-          <p className="text-zinc-500 text-sm text-center">
-            &copy; 2026 Sachin. All Rights Reserved.
-          </p>
+          <p className="text-zinc-500 text-sm text-center"> &copy; 2026 Sachin. All Rights Reserved. </p>
 
           <p className="text-zinc-500 text-sm flex items-center">
             <span className="mr-1 text-red-600 text-xl"><PiHeartFill /></span>
@@ -157,9 +117,9 @@ const Footer = () => {
 
           {/* BACK TO TOP */}
           <button
+            title="Back to top"
             onClick={scrollToTop}
             className="w-10 h-10 rounded-lg bg-purple-700 hover:bg-purple-800 flex items-center justify-center transition-all"
-            title="Back to top"
           >
             <LuArrowUp />
           </button>
@@ -169,7 +129,9 @@ const Footer = () => {
       </div>
 
     </footer>
+
   );
+
 };
 
 export default Footer;
