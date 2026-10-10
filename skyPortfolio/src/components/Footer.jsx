@@ -24,8 +24,11 @@ const Footer = () => {
           {/* BRAND */}
           <div>
 
-            <h2 className="text-2xl font-bold"> Sachin<span className="text-purple-500">.</span> </h2>
-
+            <h2 className="text-2xl font-bold flex items-center">
+              <span className="bg-gradient-to-b from-purple-400 via-purple-600 to-blue-500 bg-clip-text text-transparent">Sachin</span>
+              <span className="text-purple-500">.</span> 
+            </h2>
+    
             <p className="mt-4 text-zinc-400 leading-7 max-w-sm">
               A passionate web developer focused on creating modern, responsive, and user-friendly digital experiences.
             </p>

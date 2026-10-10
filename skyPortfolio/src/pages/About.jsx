@@ -81,7 +81,7 @@ const About = () => {
             </div>
 
             <div className="mt-4">
-              <p className="text-3xl font-bold">75+</p>
+              <p className="text-3xl font-bold">35+</p>
               <p className="mt-1 text-gray-400"> Projects Completed </p>
             </div>
 
@@ -95,7 +95,7 @@ const About = () => {
             </div>
 
             <div className="mt-4">
-              <p className="text-3xl font-bold">35+</p>
+              <p className="text-3xl font-bold">15+</p>
               <p className="mt-1 text-gray-400"> Happy Clients </p>
             </div>
 
