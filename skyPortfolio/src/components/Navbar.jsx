@@ -22,7 +22,7 @@ const Navbar = () => {
 
     return (
 
-        <nav className="relative z-50 w-full text-white bg-black/35 backdrop-blur-md border-b border-white/10">
+        <nav className="fixed top-0 left-0 z-50 w-full text-white bg-black/35 backdrop-blur-md border-b border-white/10">
 
             <div className="max-w-[1600px] mx-auto flex items-center justify-between py-5 px-6 md:px-12 lg:px-20 xl:px-24">
 

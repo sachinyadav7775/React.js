@@ -53,14 +53,18 @@ const App = () => {
 
         <Navbar />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/skill" element={<Skill />} />
-          <Route path="/project" element={<Project />} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
-        </Routes>
+        <main className='pt-24'>
+
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/skill" element={<Skill />} />
+            <Route path="/project" element={<Project />} />
+            {/* <Route path="/contact" element={<Contact />} /> */}
+          </Routes>
+
+        </main>
 
         <Footer/>
 

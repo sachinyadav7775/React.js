@@ -34,7 +34,7 @@ const Footer = () => {
             <div className="flex gap-4 mt-6">
 
               <a
-                href="#"
+                href="https://github.com/sachinyadav7775"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-purple-700 hover:border-purple-500 transition-all"
@@ -43,7 +43,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/sachinyadavsky/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-purple-700 hover:border-purple-500 transition-all"
@@ -52,7 +52,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="#"               
+                href="https://x.com/home"               
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-purple-700 hover:border-purple-500 transition-all"
