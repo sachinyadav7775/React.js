@@ -10,7 +10,7 @@ const App = () => {
     setNum(num - 1)
   }
   function jump10Num() {
-    setNum(num + 10)
+    setNum(num + 15)
   }
 
   return (
